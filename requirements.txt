@@ -1,0 +1,6 @@
+flask
+click
+torch
+torchvision
+numpy
+pandas

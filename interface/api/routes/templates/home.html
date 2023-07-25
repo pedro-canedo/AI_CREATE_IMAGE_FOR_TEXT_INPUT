@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+form input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    background-color: #007BFF;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <form action="/train" method="post">
+        <h2>Train Model</h2>
+        <label for="data_path">Training Data Path:</label>
+        <input type="text" id="data_path" name="data_path">
+        <label for="epochs">Epochs:</label>
+        <input type="text" id="epochs" name="epochs">
+        <input type="submit" value="Train">
+    </form>
+</div>
+
+<div class="container">
+    <form action="/generate" method="post">
+        <h2>Generate Image</h2>
+        <label for="text">Text:</label>
+        <input type="text" id="text" name="text">
+        <input type="submit" value="Generate Image">
+    </form>
+</div>
+
+</body>
+</html>
